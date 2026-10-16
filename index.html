@@ -2,16 +2,125 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Мои шпоргалки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экзаменационные заметки</title>
     <style>
-        body { font-family: Arial; background: #f0f0f0; padding: 20px; }
-        h1 { color: #333; }
-        img { max-width: 100%; border: 1px solid #ccc; margin: 10px 0; }
-        .block { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            background: linear-gradient(90deg, #58a6ff, #a371f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .block {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .block:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
+            border-color: #58a6ff;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #58a6ff;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #30363d;
+            font-weight: 600;
+        }
+
+        h2:empty {
+            display: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .block img {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .block img:hover {
+            opacity: 0.9;
+        }
+
+        /* Скроллбар */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0d1117;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #58a6ff;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 25px;
+            }
+
+            .block {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Экзаменационные заметки</h1>
+    <h1>📚 Экзаменационные заметки</h1>
 
     <!-- ==================== ЗАДАНИЕ 1 ==================== -->
     <div class="block">
